@@ -1,0 +1,15 @@
+<% if object.errors.any? %>
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h3 class="panel-title">The following errors were found:</h3>
+    </div>
+
+    <div class="panel-body">
+      <ul>
+        <% object.errors.full_messages.each do |m| %>
+          <li><%= m %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
